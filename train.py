@@ -141,18 +141,18 @@ def plot_reward_curve(episode_rewards: list, config: dict):
     )
 
 # Mark ALL federation events with orange lines
-first_fed = True
-for ep in range(
-    config["federation_interval"],
-    len(episode_rewards) + 1,
-    config["federation_interval"]
-):
-    if first_fed:
-        ax1.axvline(x=ep, color="orange", alpha=0.6,
-                    linewidth=1.2, label="Federation event")
-        first_fed = False
-    else:
-        ax1.axvline(x=ep, color="orange", alpha=0.4, linewidth=0.8)
+    first_fed = True
+    for ep in range(
+        config["federation_interval"],
+        len(episode_rewards) + 1,
+        config["federation_interval"]
+    ):
+        if first_fed:
+            ax1.axvline(x=ep, color="orange", alpha=0.6,
+                        linewidth=1.2, label="Federation event")
+            first_fed = False
+        else:
+            ax1.axvline(x=ep, color="orange", alpha=0.4, linewidth=0.8)
     # Show improvement number
     if len(episode_rewards) >= 20:
         first = float(np.mean(episode_rewards[:10]))

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+saved_agents/
+training_results.json
+reward_curve.png
+*.egg-info/
+.env

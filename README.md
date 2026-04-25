@@ -346,17 +346,12 @@ A: No. Q-Learning with discretized states is simpler, faster to train, and judge
 
 ---
 
-## 🎓 What You Built
+## 🎓 What we Built
 
-You built a **real RL environment** that:
+We built a **real RL environment** that:
 - Runs in OpenEnv framework (used by Meta, Hugging Face, top labs)
 - Demonstrates multi-agent coordination (theory of mind)
 - Solves a real-world problem (traffic control)
 - Uses a named technique (Federated Q-Learning)
 - Trains agents that actually improve over time
-
-This is **research-level work**. You should be proud.
-
 ---
-
-**Good luck at the hackathon. Go win this. 🚀**

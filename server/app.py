@@ -1,9 +1,5 @@
 # =============================================================
 # server/app.py  —  SmartCity Traffic Control System
-#
-# CRITICAL FIX: Now uses create_fastapi_app from OpenEnv.
-# This is a mandatory hackathon requirement.
-#
 # HOW IT WORKS:
 #   OpenEnv's create_fastapi_app automatically creates all the
 #   standard endpoints (/reset, /step, /state, /health, /docs).

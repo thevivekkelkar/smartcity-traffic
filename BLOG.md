@@ -60,7 +60,9 @@ on GPU, the model achieved 75% accuracy on held-out test scenarios.
 ![Comparison](comparison_graph.png)
 
 🔗 Try It
+
 🤗 HF Space: https://huggingface.co/spaces/Vivekkelkar/smartcity-traffic
+
 💻 GitHub: https://github.com/thevivekkelkar/smartcity-traffic
 
 Four intersections. Four agents. One city learning to breathe. 🚀

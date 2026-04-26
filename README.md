@@ -23,9 +23,11 @@ Indian cities lose crores daily to traffic gridlock. Fixed timers don't adapt â€
 
 ## Environment
 4 AI agents on a 2x2 city grid. Cars physically flow between intersections creating genuine multi-agent dependency.
+```
 [Agent 0] <-> [Agent 1]
-|               |
+    |               |
 [Agent 2] <-> [Agent 3]
+```
 
 **State (8 numbers per agent):**
 [N_cars, S_cars, E_cars, W_cars, neighbor_left, neighbor_right, time_slot, emergency_flag]

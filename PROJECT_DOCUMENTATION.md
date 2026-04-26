@@ -22,8 +22,6 @@
 10. How OpenEnv Framework Works
 11. HF TRL — How We Train an LLM
 12. Key Technical Terms Explained Simply
-13. Questions Meta Engineers Will Ask + Perfect Answers
-14. The 3-Minute Pitch (Word for Word)
 
 ---
 
@@ -773,80 +771,6 @@ We have done exactly this:
 
 ---
 
-# 13. QUESTIONS META ENGINEERS WILL ASK + PERFECT ANSWERS
-
-## Q1: "Why did you choose 0.3 for the cooperative penalty weight?"
-
-**Answer (Vivek):**
-"0.3 gives agents 30% weight on neighbor congestion versus 100% weight on their own. We tested conceptually: at 0.0, agents are purely selfish and ignore neighbors — we lose cooperative behavior. At 1.0, agents care equally about neighbors and themselves, which causes them to neglect their own intersection. 0.3 is the balance point — agents primarily manage their own intersection but are incentivized to reduce city-wide congestion. It is also small enough that agents still compete healthily rather than over-coordinating."
-
----
-
-## Q2: "How is this genuinely multi-agent and not just 4 independent agents?"
-
-**Answer (Vivek):**
-"Two mechanisms make it genuinely multi-agent. First, physical coupling — cars that leave intersection 0 enter intersection 1's queue. So my action directly changes my neighbor's state. If I clear my East lane aggressively, I am sending cars into my neighbor's West lane. This is real dependency, not just parallel agents. Second, knowledge coupling — Federated Q-Learning means every 10 episodes, strategies learned at one intersection propagate to others. An agent that discovers emergency handling works well at intersection 0 will share that knowledge with agents 1 and 2 after 10 episodes."
-
----
-
-## Q3: "Why use Q-Learning instead of Deep RL like DQN or PPO?"
-
-**Answer (Rushikesh):**
-"Q-Learning with discretized states is more interpretable and faster to train for our problem size. Our state space — after binning — has about 56,000 possible states. A Q-table handles this efficiently. Deep RL like DQN would require neural network training with thousands of gradient steps and GPU compute. Q-Learning converges in 200 episodes on CPU in under 10 seconds. For the hackathon demo context, we prioritized working, explainable code. On-site with GPU credits, we extend to TRL-based LLM training which IS deep RL."
-
----
-
-## Q4: "What does the reward curve actually prove?"
-
-**Answer (Sanika):**
-"The reward curve shows city-wide total reward on the Y axis against training episodes on the X axis. It starts around -113,000 and improves to -104,000 — a +8,408 improvement. Since reward is the negative total car count, this means we reduced city-wide congestion by 8,408 car-steps over 200 episodes. The orange vertical lines mark federation events every 10 episodes. The upward trend proves agents are genuinely learning — not just getting lucky — because the improvement is consistent across all 200 episodes."
-
----
-
-## Q5: "Why is your LLM 100% accurate? That seems suspicious."
-
-**Answer (Vivek):**
-"The 4 test scenarios we chose have clear optimal actions — a lane with 25 cars should get green, an ambulance always gets priority. GPT-2, even without domain training, can match these patterns because the prompts make the right answer syntactically obvious. The real value is not the 100% accuracy on simple cases — it is that we proved the full pipeline works: environment → text prompt → LLM response → environment reward → TRL training. On April 25 with GPU credits, we train on a larger model with harder scenarios where learning is genuinely needed."
-
----
-
-## Q6: "How would this scale to a real city?"
-
-**Answer (Vivek):**
-"Our 2×2 grid is a proof of concept. The architecture scales linearly — add more agents for more intersections, each with the same 8-number state vector extended to include more neighbors. Federated Q-Learning scales well because agents only share with direct neighbors, not the entire city. Real deployment would require: replacing simulated car counts with actual sensor data, extending the state vector to include vehicle types, and using the LLM approach (which we demonstrated) for more nuanced decision making. The OpenEnv deployment to HuggingFace means any city's traffic authority could access this environment via standard API."
-
----
-
-## Q7: "What is Federated Learning and why did you use it?"
-
-**Answer (Rushikesh):**
-"Federated Learning is a distributed ML technique where multiple models train locally and share updates without sharing raw data. We adapted this concept to Q-tables. Instead of one centralized controller that knows everything — which is a single point of failure — each intersection learns independently and periodically shares its Q-table with neighbors. This creates emergent city-wide intelligence from local learning. It is more robust, more scalable, and more realistic than centralized control."
-
----
-
-# 14. THE 3-MINUTE PITCH (WORD FOR WORD)
-
-**Who says what:**
-
-**[VIVEK — 0:00 to 0:45 — The Problem]**
-"Mumbai loses 65 crore person-hours every year to traffic jams. The root cause is simple — traffic lights run on fixed timers. They give green to North for 30 seconds regardless of whether there are 2 cars or 30 cars waiting. And when one intersection jams, it cascades to neighbors. Nobody is looking at the big picture."
-
-**[SANIKA — 0:45 to 1:30 — The Solution]**
-"We built SmartCity — 4 AI agents managing a connected 2×2 city grid. Each agent sees its own lane counts, its neighbors' congestion, the time of day, and whether there is an ambulance. Cars physically flow between intersections — so this is genuine multi-agent interaction, not 4 independent agents. Our reward formula penalizes own congestion, plus 30% of neighbor congestion, plus a massive penalty for blocking ambulances."
-
-**[RUSHIKESH — 1:30 to 2:00 — The Innovation]**
-"Our key innovation is Federated Q-Learning. Every 10 episodes, agents average their Q-tables with neighbors. A rush-hour strategy discovered at one corner of the city propagates city-wide within 10 episodes. Our comparison graph shows Federated Q-Learning outperforms both random and non-federated Q-Learning."
-
-**[VIVEK — 2:00 to 2:30 — The Proof]**
-"Our training curve shows plus 8,408 improvement over 200 episodes. We also went further — we connected a language model to our environment using Meta's own HF TRL framework with GRPO. The LLM reads traffic state as text and learns to output optimal traffic decisions. It achieved 100% accuracy on our test scenarios."
-
-**[VIVEK — 2:30 to 3:00 — The Close]**
-"Our environment is fully OpenEnv compliant, deployed to HuggingFace Spaces, with a live demo ready. The same infrastructure Meta uses for LLaMA training — we used it to train traffic agents. SmartCity is not just a hackathon project. It is a working proof that distributed cooperative AI can solve one of India's most expensive problems. Thank you."
-
----
-
-*Total: exactly 3 minutes. Practice this out loud at least 3 times.*
-
 ---
 
 # APPENDIX: QUICK REFERENCE NUMBERS
@@ -875,6 +799,3 @@ We have done exactly this:
 | Training time (CPU) | ~8 seconds |
 
 ---
-
-*Document prepared for Meta PyTorch OpenEnv Hackathon Round 2*
-*April 25-26, 2026 | Scaler School of Technology, Bangalore*

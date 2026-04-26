@@ -41,6 +41,15 @@ on GPU, the model achieved 75% accuracy on held-out test scenarios.
 - Qwen2.5-0.5B trained end-to-end with HF TRL GRPO
 - Live environment deployed on HuggingFace Spaces
 
+### Reward Curve (Easy Task)
+![Reward Curve](reward_curve.png)
+
+### All Difficulty Levels
+![All Tasks](all_tasks_curves.png)
+
+### Agent Comparison
+![Comparison](comparison_graph.png)
+
 🔗 Try It
 🤗 HF Space: https://huggingface.co/spaces/Vivekkelkar/smartcity-traffic
 💻 GitHub: https://github.com/thevivekkelkar/smartcity-traffic

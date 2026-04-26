@@ -188,10 +188,7 @@ This is the most important technical design decision in our project. Every numbe
 ## The Formula
 
 ```
-reward = -sum(own_cars)
-       - 0.3 × sum(neighbor_cars)
-       - 50  × emergency_red_flag
-       × 2.0  if rush_hour_active
+reward = -own_cars - 0.3 × neighbor_cars - 50 × emergency × 2.0_if_rush_hour
 ```
 
 ## Breaking It Down — Each Part and Why

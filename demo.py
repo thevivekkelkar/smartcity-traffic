@@ -5,10 +5,7 @@
 #   Live terminal demo — shows the city grid working in
 #   real time with ASCII art. Load trained agents and watch
 #   them make decisions step by step.
-#
-#   USE THIS DURING YOUR PITCH to show the system "alive".
-#   Judges remember visual demos. This takes 2 minutes to run.
-#
+
 # HOW TO RUN:
 #   python demo.py
 #

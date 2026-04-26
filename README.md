@@ -53,6 +53,9 @@ reward = -own_cars - 0.3 × neighbor_cars - 50 × emergency × 2.0_if_rush_hour
 ![All Tasks](all_tasks_curves.png)
 *Green=Easy(+10095), Blue=Medium(+10747), Orange=Hard(+2449), Red=Expert(+756)*
 
+## Blog / Writeup
+[Read our full writeup](BLOG.md)
+
 ## LLM Training (HF TRL GRPO)
 Trained Qwen2.5-0.5B on our environment using HF TRL GRPO. The LLM reads traffic state as natural language and learns optimal signal decisions. Achieved 75% accuracy on held-out test scenarios after 3 epochs on GPU.
 

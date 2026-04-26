@@ -731,16 +731,6 @@ def compute_reward(prompts, completions):
 
 This `compute_reward` function is the bridge. TRL trains the LLM to generate responses that maximize this reward. Our environment IS the reward signal.
 
-## Why This Matters to Judges
-
-The hackathon theme says: "Expected outcome: an environment that can be used to train multi-agent task handling in a LLM."
-
-We have done exactly this:
-1. Built the environment ✅
-2. Connected it to TRL ✅
-3. Trained an LLM on it ✅
-4. LLM achieved 100% accuracy ✅
-
 ---
 
 # 12. KEY TECHNICAL TERMS EXPLAINED SIMPLY

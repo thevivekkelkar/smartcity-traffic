@@ -6,7 +6,6 @@
 #
 # PURPOSE:
 #   Loads a trained agent and runs ONE complete episode.
-#   This is what judges run to see if your trained agent works.
 #   It also serves as a demo — run this to show the system live.
 #
 # HOW TO RUN:

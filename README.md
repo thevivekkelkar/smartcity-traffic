@@ -39,7 +39,7 @@ reward = -own_cars - 0.3 × neighbor_cars - 50 × emergency × 2.0_if_rush_hour
 
 ## Results
 
-### Reward Improvement — +8711 over 200 training episodes
+### Reward Improvement — +7000 to +10000 over 200 training episodes (stochastic environment)
 ![Reward Curve](reward_curve.png)
 *Reward improving from -113000 to -104000. Orange lines = Federated Q-Learning events every 10 episodes.*
 

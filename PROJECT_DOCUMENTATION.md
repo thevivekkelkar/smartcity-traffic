@@ -786,8 +786,8 @@ We have done exactly this:
 | Training episodes | 200 |
 | Federation interval | Every 10 episodes |
 | Federation events | 20 total |
-| Reward improvement | +8,408 |
-| LLM accuracy | 100% on test scenarios |
+| Reward improvement | +7,000 to +10,000 (varies per run) |
+| LLM accuracy |75% on test scenarios (Qwen2.5-0.5B on GPU) |
 | Emergency penalty | -50 per step |
 | Rush hour multiplier | 2.0× |
 | Cooperative weight | 0.3 (30%) |

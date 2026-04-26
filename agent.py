@@ -4,19 +4,6 @@
 # Contains TWO classes:
 #   1. QLearningAgent  — one agent, one intersection, one Q-table
 #   2. FederatedAgents — manages all 4 agents + sharing logic
-#
-# WHAT IS Q-LEARNING? (simple explanation)
-#   Imagine a notebook with every situation you've ever been in.
-#   For each situation, you write down how good each choice was.
-#   Next time you're in that situation, pick the best choice.
-#   Over time, the notebook gets smarter. That's a Q-table.
-#
-# WHAT IS FEDERATED LEARNING? (simple explanation)
-#   Every 10 episodes, each intersection shares its notebook
-#   with neighboring intersections.
-#   If intersection 0 learned "give green to East during rush hour",
-#   that knowledge spreads to intersection 3.
-#   The whole city learns together — not just one corner.
 # =============================================================
 
 import numpy as np

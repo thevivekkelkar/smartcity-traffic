@@ -16,7 +16,6 @@ pinned: false
 |---|---|
 | HuggingFace Space | https://huggingface.co/spaces/Vivekkelkar/smartcity-traffic |
 | Training Notebook (Qwen2.5-0.5B) | [SmartCity_TRL_Training_Qwen.ipynb](SmartCity_TRL_Training_Qwen.ipynb) |
-| Training Notebook (GPT-2 baseline) | [SmartCity_TRL_Training.ipynb](SmartCity_TRL_Training.ipynb) |
 | Blog Post | https://huggingface.co/spaces/Vivekkelkar/smartcity-traffic/blob/main/BLOG.md |
 
 ## Problem

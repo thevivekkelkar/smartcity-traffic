@@ -16,7 +16,7 @@
 #   python compare.py
 #
 # OUTPUT:
-#   comparison_graph.png  ← show this to judges during pitch!
+#   comparison_graph.png  
 # =============================================================
 
 import sys

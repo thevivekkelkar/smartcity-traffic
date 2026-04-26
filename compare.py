@@ -38,7 +38,7 @@ TASK     = "easy"
 
 
 # =============================================================
-# HELPER: get all 4 agent observations from environment
+# get all 4 agent observations from environment
 # =============================================================
 
 def get_obs(env):

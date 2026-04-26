@@ -2,9 +2,6 @@
 # server/smartcity_traffic_environment.py
 # SmartCity Traffic Control System — Round 2
 #
-# CRITICAL FIX: Now inherits from OpenEnv's Environment base
-# class. This is MANDATORY for hackathon submission.
-#
 # step() now takes a single TrafficAction (OpenEnv standard)
 # state is now a @property (OpenEnv standard)
 # reset() now accepts seed and episode_id (OpenEnv standard)

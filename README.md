@@ -54,6 +54,11 @@ reward = -own_cars - 0.3 × neighbor_cars - 50 × emergency × 2.0_if_rush_hour
 ![All Tasks](all_tasks_curves.png)
 *Green=Easy(+10095), Blue=Medium(+10747), Orange=Hard(+2449), Red=Expert(+756)*
 
+### Training Loss — Qwen2.5-0.5B (HF TRL GRPO)
+![Loss Curve](loss_curve.png)
+*Loss curve from Qwen2.5-0.5B training with HF TRL GRPO over 900 steps.*
+
+
 ## Blog / Writeup
 [Read our full writeup](BLOG.md)
 

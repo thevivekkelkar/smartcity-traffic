@@ -13,12 +13,6 @@ from openenv.core.env_server.types import (
     State       as OpenEnvState,
 )
 
-# ── What changed from the old version? ───────────────────────
-# OLD: class Action(BaseModel)        ← plain Pydantic
-# NEW: class Action(OpenEnvAction)    ← inherits OpenEnv base
-# This makes the framework recognise our classes correctly.
-# Everything else stays the same.
-
 
 # =============================================================
 # ACTION — what one agent sends each step

@@ -17,7 +17,7 @@ pinned: false
 | HuggingFace Space | https://huggingface.co/spaces/Vivekkelkar/smartcity-traffic |
 | Training Notebook (Qwen2.5-0.5B) | [SmartCity_TRL_Training_Qwen.ipynb](SmartCity_TRL_Training_Qwen.ipynb) |
 | Training Notebook (GPT-2 baseline) | [SmartCity_TRL_Training.ipynb](SmartCity_TRL_Training.ipynb) |
-| Blog Post | ADD_BLOG_URL_HERE |
+| Blog Post | (https://github.com/thevivekkelkar/smartcity-traffic/blob/main/BLOG.md) |
 
 ## Problem
 Indian cities lose crores daily to traffic gridlock. Fixed timers don't adapt — one intersection's jam cascades to neighbors. No coordination happens.

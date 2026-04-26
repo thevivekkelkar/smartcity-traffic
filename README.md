@@ -56,6 +56,10 @@ reward = -own_cars - 0.3 × neighbor_cars - 50 × emergency × 2.0_if_rush_hour
 ## LLM Training (HF TRL GRPO)
 Trained Qwen2.5-0.5B on our environment using HF TRL GRPO. The LLM reads traffic state as natural language and learns optimal signal decisions. Achieved 75% accuracy on held-out test scenarios after 3 epochs on GPU.
 
+## Training Notebook
+- [Open in Google Colab](https://colab.research.google.com/drive/1rDMu7jaN6QBef4fAEo50wrXeVfxBLv2k?usp=sharing)
+- [View on GitHub](SmartCity_TRL_Training_Qwen.ipynb)
+  
 ## Try the Environment
 **Live API docs:** https://vivekkelkar-smartcity-traffic.hf.space/docs
 

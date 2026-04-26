@@ -2,9 +2,6 @@
 # openenv.yaml  —  SmartCity Traffic Control System
 # =============================================================
 # This file tells the OpenEnv framework about your environment.
-# It's required for deployment to HuggingFace Spaces.
-#
-# DO NOT MODIFY unless you know what you're doing.
 # =============================================================
 
 name: smartcity-traffic

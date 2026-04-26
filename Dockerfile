@@ -1,9 +1,6 @@
 # =============================================================
 # Dockerfile  —  SmartCity Traffic Control System
 #
-# RULE: Must use openenv-base as the base image.
-# This ensures full OpenEnv framework compatibility.
-#
 # HOW TO BUILD:
 #   docker build -t smartcity-traffic:latest .
 #
